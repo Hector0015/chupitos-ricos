@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block title %}Chupitos{% endblock %}
+{% block body %}
+    <h1>Ficha del chupito</h1>
+    {% if chupitos %}
+        {{ include ('partials/datos_chupitos.html.twig', {'chupitos': chupitos})}}
+    {% else %}
+        <p>Chupito no encontrado</p>
+    <a href='/'>Inicio</a>
+
+    {% endif %}
+{% endblock %}
